@@ -229,3 +229,36 @@ function countBy(x, n) {
 }
 
 console.log(countBy(2, 5));
+
+function correct(string)
+{
+    const strMap = { "5": "S", "0": "O", "1": "i"};
+	return string.replace(/[501]/gi, str => strMap[str]);
+}
+
+console.log(correct("L0ND0N"));
+
+function SeriesSum(n)
+{
+  let result = 0;
+  let count = 1;
+  for(let i = 0; i < n; i++) {
+      result += (1 / count);
+      count = count + 3;
+  }
+  return result.toFixed(2).toString();
+}
+
+console.log(SeriesSum(4));
+
+function rentalCarCost(d) {
+
+    let fixedCost = 40;
+
+    if(d < 3) return d * fixedCost;
+    if(d >= 3 & d < 7) return (d * fixedCost) - 20;
+    if(d >= 7) return (d * fixedCost) - 50;
+    
+}
+
+console.log(rentalCarCost(7));
